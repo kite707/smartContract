@@ -64,3 +64,27 @@ Practice making smart contract with Nomad Coder.
        https://goerlifaucet.com/
   2. 메타마스크 주소 넣고 테스트이더 받기
   <p align="center"><img src="https://user-images.githubusercontent.com/70741257/226253611-309ce151-855d-4650-9904-67e9ed6614c2.png" width="60%"/><br>메타마스크 상단에 지갑 주소 복사 버튼이 있다.</p>
+
+<br>
+
+### All that Node Project 생성
+
+1. All that Node 상단 dashboard - Create New Project 클릭
+<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c2168408-a9a0-4c4e-958c-5781221b2ba5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T055758Z&X-Amz-Expires=86400&X-Amz-Signature=c6f865b53ec48d777e0aecb0f4d304a503d5f037a9a18c929c912bc102fe3794&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"/></p>
+
+2. 기본 옵션으로 진행
+<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0d888cf3-3070-47e1-9c27-e7cc39205af6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T055933Z&X-Amz-Expires=86400&X-Amz-Signature=9f8f47e21937ac4b23c355193cde4ab286b611302afb24e4aee34fda2119f4af&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"></p>
+
+3. 생성한 프로젝트로 들어가 우측 Add Protocol 버튼 누르고 Ethereum 선택
+<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/52a8e50e-00a3-4631-8dfc-0c5140f852a6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T060220Z&X-Amz-Expires=86400&X-Amz-Signature=8505dc2500b3405b56bfec11f2deb270cd47aac943085801854785f259ffb888&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"></p>
+
+4. Goeril RPC 복사해 hardhat.config.js에 추가
+
+```
+networks: {
+    goeril: {
+      url: "Goeril RPC 링크/API Key",
+    },
+  },
+```
+url에 Goeril RPC/API Key 형식으로 추가하면 된다.
