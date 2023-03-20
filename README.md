@@ -63,4 +63,4 @@ Practice making smart contract with Nomad Coder.
        <br>
        https://goerlifaucet.com/
   2. 메타마스크 주소 넣고 테스트이더 받기
-<p align="center"><img src="https://user-images.githubusercontent.com/70741257/226253611-309ce151-855d-4650-9904-67e9ed6614c2.png" width="60%"/><br>메타마스크 상단에 지갑 주소 복사 버튼이 있다.</p>
+  <p align="center"><img src="https://user-images.githubusercontent.com/70741257/226253611-309ce151-855d-4650-9904-67e9ed6614c2.png" width="60%"/><br>메타마스크 상단에 지갑 주소 복사 버튼이 있다.</p>
