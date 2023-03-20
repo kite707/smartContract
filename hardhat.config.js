@@ -111,10 +111,9 @@ task("check", "Check contract amounts", async () => {
     },
   ];
   const fundraising = new ethers.Contract(contract, abi, developer);
-  console.log(
-    await fundraising.targetAmount(),
-    await fundraising.raisedAmount()
-  );
+  targetAmount = await fundraising.targetAmount();
+  raisedAmount = await fundraising.raisedAmount();
+  console.log(parseInt(targetAmount), parseInt(raisedAmount));
 });
 module.exports = {
   networks: {
