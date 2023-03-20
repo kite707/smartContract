@@ -99,18 +99,19 @@ url에 Goerli RPC/API Key 형식으로 추가하면 된다.
 .env파일 만들기가 귀찮다면 아래와 같이 바로 붙여넣기 해도 작동은 한다. 보안상 추천하지 않는다.
 <p align="center"><img width="60%" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/956b770e-1d8d-4590-9cea-c3109c59daab/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T062626Z&X-Amz-Expires=86400&X-Amz-Signature=c8c89d1cb2234c87b1577ce83319f01f0a5ece9cb978d372fe8dcf729165ee11&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject"/><br>출처 : 노마드코더</p>
 
-
 ### 배포 코드 작성
 
 이제 작성한 컨트랙 코드를 배포해보자.
+
 1. scripts폴더 만들고 안에 deploy.js 생성
 2. deploy.js에 아래 코드 작성
+
 ```js
 const { ethers } = require("hardhat");
 
 async function main() {
   const Fundraising = await ethers.getContractFactory("Fundraising"); //Fundraising 컨트랙을 가져와서 컴파일 한다.
-  const contract = await Fundraising.deploy(100000000000000000000); //100000000000000000000이라는 인자와 함께 배포한다. 해당 인자는 Fundraising 컨트랙에 전달된다. 이 프로젝트에서는 목표금액을 의미한다.
+  const contract = await Fundraising.deploy(100); //100이라는 인자와 함께 배포한다. 해당 인자는 Fundraising 컨트랙에 전달된다. 이 프로젝트에서는 목표금액을 의미한다.
   console.log("Contract address is: ", contract.address);
 }
 
@@ -122,10 +123,28 @@ main()
   });
 ```
 
-**1 Ether = 1,000,000,000,000,000,000 WEI** 
-즉 우리의 목표 금액은 100 Ether이다.
+**1 Ether = 1,000,000,000,000,000,000 WEI**
 
 3. 아래 코드 커맨드창에 입력
+
 ```
 npx hardhat run scripts/deploy.js --network goerli
 ```
+
+4. 성공할 경우 콘솔 창에 contract address가 출력된다. 에러가 났을 경우 아래 ERRORS 참고
+
+### ERRORS
+
+- Error: insufficient funds for intrinsic transaction cost<br>
+  컨트랙을 배포하기에 테스트 이더가 부족해서 발생하는 에러. 아래 사이트에서 테스트이더를 모을 수 있다. <br>
+  https://goerli-faucet.pk910.de/
+
+- Error: overflow [ See: https://links.ethers.org/v5-errors-NUMERIC_FAULT-overflow ] <br>
+  영상을 보고 100000000000000000000라는 숫자와 함께 배포했더니 아래 에러가 발생했다. 100으로 고쳐주었다.
+
+- ProviderError: Too Many Requests error received from ethereum-goerli-rpc.allthatnode.com <br>
+  All that Node 에서 현재 too many request라며 테스트 이더도 받을 수 없는 상태인데 말 그대로 너무 많은 요청이 와서 그런 것 같다. 잠시 뒤 실행하면 성공한다. 유저 문제가 아니다.
+
+- TypeError: Cannot read properties of undefined (reading 'JsonRpcProvider')<br>
+  이더리움 버전을 5.4이하로 낮추면 해결되는 오류이다. package.json에서 이더리움 버전을 5.4로 입력하고 npm install을 한 뒤 다시 시도해보자.<br>
+  https://ethereum.stackexchange.com/questions/144451/typeerror-cannot-read-properties-of-undefined-reading-jsonrpcprovider
