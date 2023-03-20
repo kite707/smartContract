@@ -98,3 +98,34 @@ url에 Goerli RPC/API Key 형식으로 추가하면 된다.
 2. .env 파일 만들어 Private Key 저장
 .env파일 만들기가 귀찮다면 아래와 같이 바로 붙여넣기 해도 작동은 한다. 보안상 추천하지 않는다.
 <p align="center"><img width="60%" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/956b770e-1d8d-4590-9cea-c3109c59daab/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T062626Z&X-Amz-Expires=86400&X-Amz-Signature=c8c89d1cb2234c87b1577ce83319f01f0a5ece9cb978d372fe8dcf729165ee11&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject"/><br>출처 : 노마드코더</p>
+
+
+### 배포 코드 작성
+
+이제 작성한 컨트랙 코드를 배포해보자.
+1. scripts폴더 만들고 안에 deploy.js 생성
+2. deploy.js에 아래 코드 작성
+```js
+const { ethers } = require("hardhat");
+
+async function main() {
+  const Fundraising = await ethers.getContractFactory("Fundraising"); //Fundraising 컨트랙을 가져와서 컴파일 한다.
+  const contract = await Fundraising.deploy(100000000000000000000); //100000000000000000000이라는 인자와 함께 배포한다. 해당 인자는 Fundraising 컨트랙에 전달된다. 이 프로젝트에서는 목표금액을 의미한다.
+  console.log("Contract address is: ", contract.address);
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+```
+
+**1 Ether = 1,000,000,000,000,000,000 WEI** 
+즉 우리의 목표 금액은 100 Ether이다.
+
+3. 아래 코드 커맨드창에 입력
+```
+npx hardhat run scripts/deploy.js --network goerli
+```
