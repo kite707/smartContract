@@ -15,3 +15,17 @@ Practice making smart contract with Nomad Coder.
   + Solidity iteration
     https://docs.soliditylang.org/en/v0.8.19/types.html#iterable-mappings
   
+
+  -------
+  ## Contract 배포
+
+  ### 필요한 라이브러리 설치
+  ```
+  npm install -D hardhat
+
+  npm install -D ethers
+
+  npm install -D --legacy-peer-deps @nomiclabs/hardhat-ethers
+
+  npm install -D --legacy-peer-deps @nomiclabs/hardhat-waffle
+  ```
