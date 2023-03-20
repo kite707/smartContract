@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/kite707/smartContract/issues"
   },
-  "homepage": "https://github.com/kite707/smartContract#readme"
+  "homepage": "https://github.com/kite707/smartContract#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
+    "ethers": "^6.1.0",
+    "hardhat": "^2.13.0"
+  }
 }
