@@ -155,7 +155,58 @@ npx hardhat run scripts/deploy.js --network goerli
 전송한 0.001ETH가 잘 들어와있는 것을 확인할 수 있다.
 </p>
 
+### 컨트랙 함수 실행해보기
 
+1. hardhat.config.js에 아래 코드를 추가한다.
+   abi값은 artifacts/contracts/Fundraising/Fundraising.json에서 찾을 수 있다.
+
+```js
+task("check", "Check contract amounts", async () => {
+  const [developer] = await ethers.getSigners();
+  const contract = process.env.CONTRACT_ADDRESS;
+  const abi = [
+    'artifacts/contracts/Fundraising/Fundraising.json의 "abi":[]하고 나와있는 부분',
+  ];
+  const fundraising = new ethers.Contract(contract, abi, developer);
+  console.log(
+    await fundraising.targetAmount(),
+    await fundraising.raisedAmount()
+  );
+});
+```
+
+2. 아래 명령어를 실행하자
+
+```
+npx hardhat check --network goerli
+```
+
+3. targetAmount와 raisedAmount가 16진수로 출력되어서 10진수로 출력하기 위해 task를 조금 수정해주었다.
+
+```js
+task("check", "Check contract amounts", async () => {
+  const [developer] = await ethers.getSigners();
+  const contract = process.env.CONTRACT_ADDRESS;
+  const abi = [
+    'artifacts/contracts/Fundraising/Fundraising.json의 "abi":[]하고 나와있는 부분',
+  ];
+  const fundraising = new ethers.Contract(contract, abi, developer);
+
+  //여기서부터 수정된 코드
+  targetAmount = await fundraising.targetAmount();
+  raisedAmount = await fundraising.raisedAmount();
+  console.log(parseInt(targetAmount), parseInt(raisedAmount));
+});
+```
+
+<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1a27c230-6656-419a-8b30-3d4c8acd1770/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T085707Z&X-Amz-Expires=86400&X-Amz-Signature=b1e9a2e8c725aff20f23eba8095212e7cbccf9ae28520903509dab2fc6c060f9&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%">
+<br>
+값이 16진수로 출력되고 있는 모습.
+</p>
+<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/77e04740-6aba-4447-8948-d44e29be0a90/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T085758Z&X-Amz-Expires=86400&X-Amz-Signature=6404ea4dba85f3c240b59bf8cde3f929020ad1f8c22f87975d3b83317e9b8fc5&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%">
+<br>
+코드 수정 후 10진수로 출력되는 모습.
+</p>
 
 ### ERRORS
 
