@@ -1,0 +1,23 @@
+{
+  "name": "smartcontract",
+  "version": "1.0.0",
+  "description": "Practice making smart contract with Nomad Coder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kite707/smartContract.git"
+  },
+  "keywords": [
+    "Smart",
+    "Contract"
+  ],
+  "author": "HyeYeon Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kite707/smartContract/issues"
+  },
+  "homepage": "https://github.com/kite707/smartContract#readme"
+}
