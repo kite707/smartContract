@@ -7,3 +7,11 @@ Practice making smart contract with Nomad Coder.
 + 데드라인 도달 시 
   -기부금 총액>=목표금액일 경우 돈은 프로젝트 오너에게 전달
   -기부금 총액<목표금액일 경우 돈은 기부자들에게 환불
+
+
+  ## References
+  + Solidity types
+    https://docs.soliditylang.org/en/v0.8.19/types.html#types
+  + Solidity iteration
+    https://docs.soliditylang.org/en/v0.8.19/types.html#iterable-mappings
+  
