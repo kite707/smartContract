@@ -29,3 +29,14 @@ Practice making smart contract with Nomad Coder.
 
   npm install -D --legacy-peer-deps @nomiclabs/hardhat-waffle
   ```
+
+  ### hardhat 프로젝트 생성
+  1. 
+  ```
+  npx hardhat
+  ```
+
+  2. create an empty hardhat.config.js 선택
+  3. hardhat.config.js 파일의 solidity 버전을 Fundraising.sol 상단 pragma solidity 버전에 맞추기
+  4. hardhat.config.js 파일에 require("@nomiclabs/hardhat-waffle") 추가
+  
