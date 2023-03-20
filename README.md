@@ -132,6 +132,14 @@ npx hardhat run scripts/deploy.js --network goerli
 ```
 
 4. 성공할 경우 콘솔 창에 contract address가 출력된다. 에러가 났을 경우 아래 ERRORS 참고
+5. 이제 메타마스크를 통해 Ether Scan에 들어가면 배포된 컨트랙을 확인할 수 있다.
+<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5ef61dd4-6685-4f0c-a2a0-4b6ff36ea8bd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T080101Z&X-Amz-Expires=86400&X-Amz-Signature=0aeb7eb5c1645aa341f13c8fcd68b3185bd23eaeb505593ff287ba63721aa6bf&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"></p>
+
+### 배포된 컨트랙과 상호작용 하기
+
+1. Ether Scan에서 Contract Creation을 눌러 해당 컨트랙 상세 보기 페이지로 접근
+<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b459233f-9c45-4bde-95b1-ba1826473f6e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T080853Z&X-Amz-Expires=86400&X-Amz-Signature=49cb9146523de720036f36cd1a1ed587860dfa9a2bd6c91378d92199c7066212&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"></p>
+
 
 ### ERRORS
 
