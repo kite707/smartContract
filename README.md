@@ -1,5 +1,5 @@
 # smartContract
-
+https://www.youtube.com/watch?v=8WBvMEql6SQ&ab_channel=%EB%85%B8%EB%A7%88%EB%93%9C%EC%BD%94%EB%8D%94NomadCoders
 Practice making smart contract with Nomad Coder.
 
 ## 목표
