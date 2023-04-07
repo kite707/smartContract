@@ -71,14 +71,16 @@ Practice making smart contract with Nomad Coder.
 ### All that Node Project 생성
 
 1. All that Node 상단 dashboard - Create New Project 클릭
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c2168408-a9a0-4c4e-958c-5781221b2ba5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T055758Z&X-Amz-Expires=86400&X-Amz-Signature=c6f865b53ec48d777e0aecb0f4d304a503d5f037a9a18c929c912bc102fe3794&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"/></p>
+![image](https://user-images.githubusercontent.com/70741257/230558641-77829901-8a21-4e55-99fd-515d7fe0fcd4.png)
+
 
 2. 기본 옵션으로 진행
 ![image](https://user-images.githubusercontent.com/70741257/230558537-748ac9a4-1ec9-46ae-a6cc-24352826ca94.png)
 
 
 3. 생성한 프로젝트로 들어가 우측 Add Protocol 버튼 누르고 Ethereum 선택
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/52a8e50e-00a3-4631-8dfc-0c5140f852a6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T060220Z&X-Amz-Expires=86400&X-Amz-Signature=8505dc2500b3405b56bfec11f2deb270cd47aac943085801854785f259ffb888&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"></p>
+![image](https://user-images.githubusercontent.com/70741257/230558752-7fdc57e5-b642-4cb3-bafa-7cd9b5883dc7.png)
+
 
 4. Goerli RPC 복사해 hardhat.config.js에 추가
 
@@ -99,7 +101,8 @@ url에 Goerli RPC/API Key 형식으로 추가하면 된다.
 1. MetaMask에서 계정 세부정보 - 비공개 키 내보내기 - 비밀번호 입력. 나온 Private Key 복사
 2. .env 파일 만들어 Private Key 저장
 .env파일 만들기가 귀찮다면 아래와 같이 바로 붙여넣기 해도 작동은 한다. 보안상 추천하지 않는다.
-<p align="center"><img width="60%" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/956b770e-1d8d-4590-9cea-c3109c59daab/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T062626Z&X-Amz-Expires=86400&X-Amz-Signature=c8c89d1cb2234c87b1577ce83319f01f0a5ece9cb978d372fe8dcf729165ee11&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject"/><br>출처 : 노마드코더</p>
+![image](https://user-images.githubusercontent.com/70741257/230558851-ed2853d7-4885-459b-a3ac-c1a3ff98f9ce.png)
+
 
 ### 배포 코드 작성
 
