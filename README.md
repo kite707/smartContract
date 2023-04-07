@@ -210,17 +210,13 @@ task("check", "Check contract amounts", async () => {
 });
 ```
 
+<br><br>
+
 ![image](https://user-images.githubusercontent.com/70741257/230560286-2a16bbb2-7406-454b-9d05-c65f3c85d361.png)
-
-<br>
 값이 16진수로 출력되고 있는 모습.
-</p>
-![image](https://user-images.githubusercontent.com/70741257/230560335-32777dbe-1d97-4db1-b23e-c432e53fde90.png)
-
-
 <br>
+![image](https://user-images.githubusercontent.com/70741257/230560335-32777dbe-1d97-4db1-b23e-c432e53fde90.png)
 코드 수정 후 10진수로 출력되는 모습.
-</p>
 
 ### ERRORS
 
