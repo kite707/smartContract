@@ -138,24 +138,30 @@ npx hardhat run scripts/deploy.js --network goerli
 
 4. 성공할 경우 콘솔 창에 contract address가 출력된다. 에러가 났을 경우 아래 [ERRORS](#errors) 참고
 5. 이제 메타마스크를 통해 Ether Scan에 들어가면 배포된 컨트랙을 확인할 수 있다.
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5ef61dd4-6685-4f0c-a2a0-4b6ff36ea8bd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T080101Z&X-Amz-Expires=86400&X-Amz-Signature=0aeb7eb5c1645aa341f13c8fcd68b3185bd23eaeb505593ff287ba63721aa6bf&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"></p>
+![image](https://user-images.githubusercontent.com/70741257/230559198-808944fa-e3f8-4ac4-952c-542cb58c2230.png)
+
 
 ### 배포된 컨트랙과 상호작용 하기
 
 1. Ether Scan에서 Contract Creation을 눌러 해당 컨트랙 상세 보기 페이지로 접근
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b459233f-9c45-4bde-95b1-ba1826473f6e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T080853Z&X-Amz-Expires=86400&X-Amz-Signature=49cb9146523de720036f36cd1a1ed587860dfa9a2bd6c91378d92199c7066212&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"></p>
+![image](https://user-images.githubusercontent.com/70741257/230559215-b3976cd8-dc2c-4caf-90a7-7ee974d8288d.png)
+
 
 2. 해당 페이지 상단 컨트랙 주소 복사
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b459233f-9c45-4bde-95b1-ba1826473f6e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T080853Z&X-Amz-Expires=86400&X-Amz-Signature=49cb9146523de720036f36cd1a1ed587860dfa9a2bd6c91378d92199c7066212&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%"></p>
+![image](https://user-images.githubusercontent.com/70741257/230559246-3997269b-8fac-4fca-ba87-c7899663ed2f.png)
+
 
 3. 복사한 주소로 이더 전송
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b4343e02-994d-4c2d-88aa-2db96dc19b7d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T083113Z&X-Amz-Expires=86400&X-Amz-Signature=764a5c891f8a5013f3a6c2797d6924ff954974b87391768255da5b81bdbeaef5&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%">
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/70741257/230560144-57997ad4-07db-4147-b217-2749d0274af6.png">
+
+
 <br>
 보내기 누르고 컨트랙 주소 입력, 0.001ETH 전송
 </p>
 
 4. 컨트랙 상세 페이지 확인
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0e2a5404-9c26-45e9-8028-a8eb4c4c1737/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T083643Z&X-Amz-Expires=86400&X-Amz-Signature=d54343b46fc269f85d2300915ddf9154bd641dc4552b423a13ab41c754c91021&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%">
+![image](https://user-images.githubusercontent.com/70741257/230560205-870d04bf-79b1-4ccb-9d62-99dc492abe4c.png)
+
 <br>
 전송한 0.001ETH가 잘 들어와있는 것을 확인할 수 있다.
 </p>
@@ -204,11 +210,14 @@ task("check", "Check contract amounts", async () => {
 });
 ```
 
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1a27c230-6656-419a-8b30-3d4c8acd1770/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T085707Z&X-Amz-Expires=86400&X-Amz-Signature=b1e9a2e8c725aff20f23eba8095212e7cbccf9ae28520903509dab2fc6c060f9&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%">
+![image](https://user-images.githubusercontent.com/70741257/230560286-2a16bbb2-7406-454b-9d05-c65f3c85d361.png)
+
 <br>
 값이 16진수로 출력되고 있는 모습.
 </p>
-<p align="center"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/77e04740-6aba-4447-8948-d44e29be0a90/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230320%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230320T085758Z&X-Amz-Expires=86400&X-Amz-Signature=6404ea4dba85f3c240b59bf8cde3f929020ad1f8c22f87975d3b83317e9b8fc5&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject" width="60%">
+![image](https://user-images.githubusercontent.com/70741257/230560335-32777dbe-1d97-4db1-b23e-c432e53fde90.png)
+
+
 <br>
 코드 수정 후 10진수로 출력되는 모습.
 </p>
